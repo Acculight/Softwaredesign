@@ -6,6 +6,7 @@ namespace Aufgabe_1
     {
         static void Main(string[] args)
         {
+            ir
             var Num = args[1];
             double d = Convert.ToDouble(Num);
             double a = 0;

@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Davide\\Documents\\GitHub\\Softwaredesign\\Aufgabe 1.1\\Aufgabe 1.csproj",
-      "projectName": "Aufgabe 1",
-      "projectPath": "C:\\Users\\Davide\\Documents\\GitHub\\Softwaredesign\\Aufgabe 1.1\\Aufgabe 1.csproj",
+      "projectUniqueName": "C:\\Users\\Davide\\Documents\\GitHub\\SoftwareDesign2\\Aufgabe-1-1\\Aufgabe-1-1.csproj",
+      "projectName": "Aufgabe-1-1",
+      "projectPath": "C:\\Users\\Davide\\Documents\\GitHub\\SoftwareDesign2\\Aufgabe-1-1\\Aufgabe-1-1.csproj",
       "packagesPath": "C:\\Users\\Davide\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Davide\\Documents\\GitHub\\Softwaredesign\\Aufgabe 1.1\\obj\\",
+      "outputPath": "C:\\Users\\Davide\\Documents\\GitHub\\SoftwareDesign2\\Aufgabe-1-1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
