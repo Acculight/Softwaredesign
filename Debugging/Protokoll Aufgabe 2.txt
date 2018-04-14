@@ -1,0 +1,14 @@
+Person ist eine Klasse, die die Parameter der Eltern inne hält und somit 
+sind diese ELtern auch "Personen" mit Name, Geburtsdatum und wieder eigenen Eltern,
+die wiederrum "Personen" sind. 
+
+Der Inhalt von Root besteht zum Zeitpunkt des Breakpoints aus den Daten
+des jüngsten Mitglieds des Stammbaums(Name, Geburtsdatum) und allen anderen Verwandten und ihren Daten.
+
+Ich habe die Bedingung von != Battenberg auf == Battenberg geändert. Das Programm crashte, weil die Methode Find sich selbst
+mit Find(Person.Mom) immer wieder mit der nächsten Mutter selbst aufrief, ohne bis zur Suche eines Dads kommen zu können, bis keine Mom mehr übrig war und das Programm in eine Sackgasse rannte.
+Wenn Person Find statt der Mütterlichen, die Väterliche Seite absuchen würde, hätte es in diesem Fall Funktioniert.
+
+Um einen anderen Namen ausgeben zu lassen, muss die Bedingung von != auf == geändert werden. Allerdings muss der gesuchte Name im Stammbaum Mütterlicherseits
+vertreten sein, weshalb es Z.B. mit dem Namen Battenberg nicht funktioniert.
+
