@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dokumente\\Studium\\Semester 4\\Softwaredesign\\Github_Projekte\\Softwaredesign\\Aufgabe 1\\Aufgabe 1.csproj",
+      "projectUniqueName": "E:\\Dokumente\\Studium\\Semester 4\\Softwaredesign\\Github_Projekte\\Softwaredesign\\Aufgabe 1.1\\Aufgabe 1.csproj",
       "projectName": "Aufgabe 1",
-      "projectPath": "E:\\Dokumente\\Studium\\Semester 4\\Softwaredesign\\Github_Projekte\\Softwaredesign\\Aufgabe 1\\Aufgabe 1.csproj",
+      "projectPath": "E:\\Dokumente\\Studium\\Semester 4\\Softwaredesign\\Github_Projekte\\Softwaredesign\\Aufgabe 1.1\\Aufgabe 1.csproj",
       "packagesPath": "C:\\Users\\Acculight\\.nuget\\packages\\",
-      "outputPath": "E:\\Dokumente\\Studium\\Semester 4\\Softwaredesign\\Github_Projekte\\Softwaredesign\\Aufgabe 1\\obj\\",
+      "outputPath": "E:\\Dokumente\\Studium\\Semester 4\\Softwaredesign\\Github_Projekte\\Softwaredesign\\Aufgabe 1.1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
