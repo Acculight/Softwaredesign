@@ -1,6 +1,4 @@
-Person ist eine Klasse, die die Parameter der Eltern inne hält und somit 
-sind diese ELtern auch "Personen" mit Name, Geburtsdatum und wieder eigenen Eltern,
-die wiederrum "Personen" sind. 
+Person ist eine Klasse, die aus den Parametern Mom und Dad besteht. Da diese selbst Personen sind, ruftf sich die Klasse selbst auf.
 
 Der Inhalt von Root besteht zum Zeitpunkt des Breakpoints aus den Daten
 des jüngsten Mitglieds des Stammbaums(Name, Geburtsdatum) und allen anderen Verwandten und ihren Daten.
@@ -12,3 +10,10 @@ Wenn Person Find statt der Mütterlichen, die Väterliche Seite absuchen würde, hä
 Um einen anderen Namen ausgeben zu lassen, muss die Bedingung von != auf == geändert werden. Allerdings muss der gesuchte Name im Stammbaum Mütterlicherseits
 vertreten sein, weshalb es Z.B. mit dem Namen Battenberg nicht funktioniert.
 
+Durch die erweiterung von Find mit:
+   if(person.Mom != null)
+  ret = Find(person.Mom);
+if(person.Dad != null)
+  ret = Find(person.Dad);
+ return ret;
+ kann der Stammbaum komplett abgefragt werden.

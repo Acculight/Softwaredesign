@@ -18,16 +18,16 @@ namespace Debugging
     {
         public static Person Find(Person person)
         {
-            int alter1 = 200;
-            int alter2 = 120;
             Person ret = null;
-            if (alter1 > person.DateOfBirth.Year - DateTime.Now.Year && person.DateOfBirth.Year - DateTime.Now.Year > alter2){
+            int alter = DateTime.Now.Year - person.DateOfBirth.Year;
+            if(135 < alter && alter < 137)
                 return person;
-            }
-
+                
+            if(person.Mom != null)
             ret = Find(person.Mom);
             if (ret != null)
                 return ret;
+            if(person.Mom != null)
             ret = Find(person.Dad);
             return ret;
         }
