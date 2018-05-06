@@ -1,0 +1,49 @@
+Die Funktion „public static Person Find (Person person)“ ruft sich nach
+dem durchlauf selbstständig wieder auf, bis die Funktion den Wert „null“
+zurückgibt.
+
+---
+
+Die Funktion „BuildTree()“ erzeugt einen Familienstammbaum der bei der
+jüngsten Person beginnt. Der Inhalt von „root“ im Debugger zählt die
+Familienmitglieder und ihre Abhängigkeit und umgekehrt chronologischer
+Reihenfolge auf. Beginnend mit dem jüngsten Familienmitglied Willi
+Cambridge.
+
+---
+
+Die if-Bedingung wird geändert:
+Vorher: if (person.LastName != „Battenberg“)
+Nachher: if (person.LastName != „Cambridge“ && person.LastName !=
+„Spencer“)
+Nun wird aufgrund der geänderten Suchparameter als erste Person Franzi
+Roche ausgegeben.
+Wenn die Bedingung geändert wird auf:
+If (person.LastName == „Battenberg“)
+Entsteht eine „System.NullReferenceException“, hier wird nur die
+mütterliche Seite des Stammbaums durchsucht. Auf der mütterlichen
+Seite von Willis Familie ist jedoch niemand mit dem Nachnamen
+Battenberg. Diese „System-NullReferenceException“ kann mit einer
+kleinen Änderung am Code verhindert werden:
+
+If(person.Mom != null)
+ret =Find(person.Mom);
+If(person.Dad != null)
+ret =Find(person.Dad);
+Return ret;
+
+---
+
+Int age = DateTime.Now.Year – person.DateOfBirth.Year;
+If(40 < age && age < 70)
+Return person;
+If(person.Mom != null)
+ret =Find(person.Mom);
+If(person.Dad != null)
+ret =Find(person.Dad);
+Return ret;
+
+Dieser Code-Baustein ermöglicht es den Stammbaum nach Personen in
+einer bestimmten Altersspanne zu durchsuchen, hier zwischen 40 und 70
+Jahren. Es wird dann die erste Person in dieser Altersspanne
+zurückgegeben.
