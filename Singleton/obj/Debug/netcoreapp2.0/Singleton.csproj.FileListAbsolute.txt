@@ -1,0 +1,11 @@
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\obj\Debug\netcoreapp2.0\Singleton.csprojResolveAssemblyReference.cache
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\obj\Debug\netcoreapp2.0\Singleton.csproj.CoreCompileInputs.cache
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\obj\Debug\netcoreapp2.0\Singleton.AssemblyInfoInputs.cache
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\obj\Debug\netcoreapp2.0\Singleton.AssemblyInfo.cs
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\bin\Debug\netcoreapp2.0\Singleton.deps.json
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\bin\Debug\netcoreapp2.0\Singleton.runtimeconfig.json
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\bin\Debug\netcoreapp2.0\Singleton.runtimeconfig.dev.json
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\bin\Debug\netcoreapp2.0\Singleton.dll
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\bin\Debug\netcoreapp2.0\Singleton.pdb
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\obj\Debug\netcoreapp2.0\Singleton.dll
+E:\Dokumente\Studium\Semester 4\Softwaredesign\Github_Projekte\Softwaredesign\Singleton\obj\Debug\netcoreapp2.0\Singleton.pdb
