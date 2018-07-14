@@ -23,27 +23,27 @@ namespace Text_Adventure
             npcs = new List<Npc>();
         }
 
-        public void addDoor(Door door)
+        public void AddDoor(Door door)
         {
             doors.Add(door);
         }
 
-        public List<Door> getDoors()
+        public List<Door> GetDoors()
         {
             return new List<Door>(doors);
         }
 
-        public List<Npc> getNpcs()
+        public List<Npc> GetNpcs()
         {
             return new List<Npc>(npcs);
         }
 
-        public void addNpc(Npc npc)
+        public void AddNpc(Npc npc)
         {
             npcs.Add(npc);
         }
 
-        public void removeNpc(Npc npc)
+        public void RemoveNpc(Npc npc)
         {
             if(npcs.Contains(npc))
             {
@@ -51,17 +51,17 @@ namespace Text_Adventure
             }
         }
 
-        public List<Item> getInventory()
+        public List<Item> GetInventory()
         {
             return new List<Item>(inventory);
         }
 
-        public void addItem(Item item)
+        public void AddItem(Item item)
         {
             inventory.Add(item);
         }
 
-        public void removeItem(Item item)
+        public void RemoveItem(Item item)
         {
             if (inventory.Contains(item))
             {
@@ -69,19 +69,14 @@ namespace Text_Adventure
             }
         }
 
-        public string getTitle()
+        public string GetTitle()
         {
             return roomName;
         }
 
-        public string getDescription()
+        public string GetDescription()
         {
             return roomDescription;
-        }
-
-        public void setDescription(string description)
-        {
-            roomDescription = description;
         }
     }
 }

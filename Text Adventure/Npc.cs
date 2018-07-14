@@ -9,11 +9,11 @@ namespace Text_Adventure
     public class Npc
     {
         private string name;
-        public bool fightable;
+        private bool fightable;
         private string description;
-        public string answer;
-        int health;
-        Room currentRoom;
+        private string answer;
+        private int health;
+        private Room currentRoom;
         private List<Item> inventory;
 
         public Npc(string _name, string _description, bool _fightable, string _answer, int _health, Room _currenRoom)
@@ -38,29 +38,24 @@ namespace Text_Adventure
             return currentRoom;
         }
 
-        public string getName
+        public string getName()
         {
-            get {return name;}
+            return name;
         }
 
-        public bool getFightable
+        public bool getFightable()
         {
-            get {return fightable;}
+            return fightable;
         }
 
-        public string getDescription
+        public string getDescription()
         {
-            get {return description;}
+            return description;
         }
 
         public string getAnswer()
         {
             return answer;
-        }
-
-        public void changeAnswer(string _answer)
-        {
-            answer = _answer;
         }
 
         public int getHealth()

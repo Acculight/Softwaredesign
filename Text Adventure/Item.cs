@@ -10,7 +10,6 @@ namespace Text_Adventure
     {
         public string name;
         private bool useable;
-        private bool needsItem;
         private string description;
 
         public Item(string _name, string _description, bool _useable)
@@ -20,19 +19,19 @@ namespace Text_Adventure
             description = _description;
         }
 
-        public string getName
+        public string getName()
         {
-            get {return name;}
+            return name;
         }
 
-        public bool getUseable
+        public bool getUseable()
         {
-            get {return useable;}
+            return useable;
         }
 
-        public string getDescription
+        public string getDescription()
         {
-            get {return description;}
+            return description;
         }
     }
 }

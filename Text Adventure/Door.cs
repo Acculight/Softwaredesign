@@ -13,8 +13,6 @@ namespace Text_Adventure
             North, East, South, West
         }
 
-        public static string[] moveShortcuts = {"Null", "N", "E", "S", "W"};
-
         private Room leadsTo;
         private Directions direction;
         private string directionName;
@@ -28,42 +26,37 @@ namespace Text_Adventure
             locked = _locked;
         }
 
-        public bool getLocked()
+        public bool SetLocked()
         {
             return locked;
         }
 
-        public void setLocked(bool _locked)
+        public void SetLocked(bool _locked)
         {
             locked = _locked;
         }
 
-        public void setDirection(Directions _direction)
+        public bool GetLocked()
         {
-            direction = _direction;
+            return locked;
         }
 
-        public Directions getDirections()
+        public Directions GetDirections()
         {
             return direction;
         }
 
-        public string getmoveShortcuts()
-        {
-            return moveShortcuts[(int)direction].ToLower();
-        }
-
-        public void setleadsTo(Room _leadsTo)
+        public void SetleadsTo(Room _leadsTo)
         {
             leadsTo = _leadsTo;
         }
 
-        public Room getLeadsTo()
+        public Room GetLeadsTo()
         {
             return leadsTo;
         }
 
-        public string getdirectionName()
+        public string GetdirectionName()
         {
             return directionName;
         }

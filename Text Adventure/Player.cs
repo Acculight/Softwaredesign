@@ -8,8 +8,7 @@ namespace Text_Adventure
 {
     class Player
     {
-        int health;
-        
+        private int health;
         private List<Item> inventory;
 
         public Player(int _health)
@@ -19,12 +18,12 @@ namespace Text_Adventure
         }
 
 
-        public List<Item> getInventory()
+        public List<Item> GetInventory()
         {
             return new List<Item>(inventory);
         }
 
-        public void showInventory()
+        public void ShowInventory()
         {
             if ( inventory.Count > 0 )
 			{
@@ -32,7 +31,7 @@ namespace Text_Adventure
 
 			foreach ( Item item in inventory )
 			{
-			Console.WriteLine(item.getName);
+			Console.WriteLine(item.GetName());
 			}
 			}
 			else
@@ -42,23 +41,23 @@ namespace Text_Adventure
             return;
         }
 
-        public int getHealth()
+        public int GetHealth()
         {
             return health;
         }
 
-        public int reduceHealth()
+        public int ReduceHealth()
         {
             health = health - 10;
             return health;
         }
 
-        public void addItem(Item item)
+        public void AddItem(Item item)
         {
             inventory.Add(item);
         }
 
-        public void removeItem(Item item)
+        public void RemoveItem(Item item)
         {
             if (inventory.Contains(item))
             {
@@ -66,7 +65,7 @@ namespace Text_Adventure
             }
         }
 
-        public Item playerdropItem(string itemName)
+        public Item PlayerdropItem(string itemName)
         {
             foreach (Item _item in inventory)
             {
