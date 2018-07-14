@@ -56,7 +56,6 @@ namespace Text_Adventure
         public void addItem(Item item)
         {
             inventory.Add(item);
-            Console.WriteLine("Debugg item : " + item);
         }
 
         public void removeItem(Item item)
