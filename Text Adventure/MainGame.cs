@@ -142,8 +142,8 @@ namespace Text_Adventure
         //commands
         public void commands(string command)
         {
-           // try
-            //{
+            try
+            {
 
             if((command == "help") || (command == "h"))
             {
@@ -330,13 +330,13 @@ namespace Text_Adventure
             //No valid command
             Console.WriteLine("\nI am pretty shure i did not do that. (invalid command).\n");
             return;
-          //  }
+            }
         
-            /*catch
+            catch
             {
                 Console.WriteLine("\nI am pretty shure i did not do that (invalid command).\n");
                 return;
-            }*/
+            }
             }
 
 
