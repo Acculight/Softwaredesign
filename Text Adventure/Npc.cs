@@ -27,58 +27,58 @@ namespace Text_Adventure
             inventory = new List<Item>();
         }
     
-        public void changeCurrentRoom(Room room)
+        public void ChangeCurrentRoom(Room room)
         {
             currentRoom = room;
             return;
         }
 
-        public Room getCurrentRoom()
+        public Room GetCurrentRoom()
         {
             return currentRoom;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }
 
-        public bool getFightable()
+        public bool GetFightable()
         {
             return fightable;
         }
 
-        public string getDescription()
+        public string GetDescription()
         {
             return description;
         }
 
-        public string getAnswer()
+        public string GetAnswer()
         {
             return answer;
         }
 
-        public int getHealth()
+        public int GetHealth()
         {
             return health;
         }
 
-        public void reduceHealth()
+        public void ReduceHealth()
         {
             health = health - 15;
         }
 
-        public List<Item> getInventory()
+        public List<Item> GetInventory()
         {
             return inventory;
         }
 
-        public void addItem(Item item)
+        public void AddItem(Item item)
         {
             inventory.Add(item);
         }
 
-        public void removeItem(Item item)
+        public void RemoveItem(Item item)
         {
             inventory.Remove(item);
         }

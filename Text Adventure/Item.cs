@@ -19,17 +19,17 @@ namespace Text_Adventure
             description = _description;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }
 
-        public bool getUseable()
+        public bool GetUseable()
         {
             return useable;
         }
 
-        public string getDescription()
+        public string GetDescription()
         {
             return description;
         }

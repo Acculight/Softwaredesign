@@ -27,16 +27,16 @@ namespace Text_Adventure
         {
             if ( inventory.Count > 0 )
 			{
-			Console.WriteLine("\nI carried the following things: \n");
+			    Console.WriteLine("\nI carried the following things: \n");
 
-			foreach ( Item item in inventory )
-			{
-			Console.WriteLine(item.GetName());
-			}
+			    foreach ( Item item in inventory )
+			    {
+			        Console.WriteLine(item.GetName());
+			    }
 			}
 			else
 			{
-			Console.WriteLine("\nI had no items with me.\n");
+			    Console.WriteLine("\nI had no items with me.\n");
 			}
             return;
         }

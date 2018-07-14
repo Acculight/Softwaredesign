@@ -38,14 +38,13 @@ namespace Text_Adventure
             Item car = new Item("car", "My car, an old Hudson that had seen better days.", false);
             r1.AddItem(car);
             
-
             //Entrance Hall
-            Room r2 = new Room("Entrance Hall", "A large room, with several columns and a floor made out of marvel. 2 police officers were gathering around a lifeless body.");
+            Room r2 = new Room("Entrance Hall", "A large room, with several columns and a floor made out of marvel. Two police officers were gathering around a lifeless body.");
             Item dagger = new Item("dagger", "The dagger was completely made out of stone. Strange symbols were engraved in the blade. They looked familiar to me, althoug i was shure that i had never seen them bevore.", true);
-            Item body = new Item("body", "The dead Body of a young woman. She was stabbed in the chest with a fancy dagger, but it seems to have missed hear heart.", false);
-            Item bloodtraces = new Item("blood", "There were blood traces on the floor. As if the victim would have runned for her life and collapsed here. They seemed to leed to the eastern door.", false);
+            Item body = new Item("dead body", "The dead Body of a young woman. She was stabbed in the chest with a fancy dagger, but it seems to have missed hear heart.", false);
+            Item bloodtraces = new Item("blood trace", "There were blood traces on the floor. As if the victim would have runned for her life and collapsed here. They seemed to leed to the eastern door.", false);
             Item note = new Item("note", "On the note was written: 'Meet me in the library' It is signed with the letter 'C'.", true);
-            Npc butler = new Npc("Alfred Sharp", "Grey hair, a small mustache and a perfectly aligned suit dressed that man. He looked exactly like you would imagine a butler to look like.", true, "'Well Mr. Grifford, despite this terrible happenings today, i have much work to do. Because of the absence of Lord Charlie Battenberg till tomorrow. And before you ask, i have been in the service Room this whole day, assisting Lady Battenberg. The only stange thing, exept the 'incident', is that my precious cleaning mop is missing since this morning.", 100, r2);
+            Npc butler = new Npc("Alfred Sharp", "Grey hair, a small mustache and a perfectly aligned suit dressed that man. He looked exactly like you would imagine a butler to look like.", true, "Well Mr. Grifford, despite this terrible happenings today, i have much work to do. Because of the absence of Lord Charlie Battenberg till tomorrow. And before you ask, i have been in the service Room this whole day, assisting Lady Battenberg. The only stange thing, exept the 'incident', is that my precious cleaning mop is missing since this morning.", 100, r2);
             Npc police = new Npc("The Police", "Two police officers guarded the crime scene.", false, "Well Mr. Grifford, you may start with your investigation. If you should find anything... conclusive, don't hesitade to tell us.", 100, r2);
             r2.AddItem(dagger);
             r2.AddItem(note);
@@ -61,7 +60,7 @@ namespace Text_Adventure
 
             //Kitchen
             Room r4 = new Room("Kitchen", "A white stained room, that looks like a kitchen that is used by experienced people.");
-            Npc cook = new Npc("Agate Murror", "A well feeded woman, with short brown hair. She is wearing a typical white kitchen uniform and looks quite bussy", false, "'I don't know what happened. I have been in the kitchen the whole day. I was looking for a thief. In the last days, food has been disappearing and i am going to find out why!'", 100, r4);
+            Npc cook = new Npc("Agate Murror", "A well feeded woman, with short brown hair. She is wearing a typical white kitchen uniform and looks quite bussy", false, "I don't know what happened. I have been in the kitchen the whole day. I was looking for a thief. In the last days, food has been disappearing and i am going to find out why!", 100, r4);
 
             //Floor
             Room r5 = new Room("Floor", "A long floor with several doors.");
@@ -82,6 +81,8 @@ namespace Text_Adventure
 
             //Secret Passage
             Room r8 = new Room("Secret passage", "A long tunnel, with torches. Strange, they were burning.");
+            Item mop = new Item("cleaning mop", "A mop, that is mostly used to clean the ground. It was wet.", true);
+            Item food = new Item("food leftovers", "Someone or something didn't finish its last meal.", false);
 
             //Secret Chamber
             Room r9 = new Room("Secret chamber", "The chamber was filled with torch light. In the middle was a man, bowed over an altar of stone. It was edged in blood.");
@@ -137,14 +138,13 @@ namespace Text_Adventure
             //Intro
             Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("It was one of those rainy days in London, when i, Ian Griffort, private Detective, got called to help by the local Police.");
-            Console.WriteLine("The houde maiden had been found dead. Stabbed by in the back.");
+            Console.WriteLine("The house maiden had been found dead. Stabbed in the back with a dagger.");
             Console.WriteLine("It took about an hour, then i arrived at Battenberg Manor.");
-            Console.WriteLine("The Police had already finished it's investigation but it ended without a result.");
+            Console.WriteLine("The Police had already finished its investigation but it ended without a result.");
             Console.WriteLine("It was on me, to find out what happened there.");
-            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("I arrived at the ");
+            Console.WriteLine("\nI arrived at the ");
             ShowRoom();
-
+            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine("For a list of commands type 'h' or 'help'.");
         }
 
@@ -158,6 +158,7 @@ namespace Text_Adventure
                 if((command == "help") || (command == "h"))
                 {
                     Console.WriteLine("help(h), look(l), inventory(i), move <direction>, take <item>, drop <item>, attack <npc>, look at <item/npc>, talk to <npc>");
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
@@ -165,6 +166,7 @@ namespace Text_Adventure
                 if((command == "look") || (command == "l"))
                 {
                     ShowRoom();
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
@@ -172,6 +174,7 @@ namespace Text_Adventure
                 if ((command == "inventory") || (command == "i"))
                 {
                     player.ShowInventory();
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
@@ -179,6 +182,7 @@ namespace Text_Adventure
                 if((command.Length >= 4) & (command.Substring(0, 4) == "move"))
                 {
                     Move(command.Substring(5));
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
@@ -186,6 +190,7 @@ namespace Text_Adventure
                 if((command.Length >= 4) & (command.Substring(0, 4) == "take"))
                 {
                     Take(command); 
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;   
                 }
 
@@ -193,6 +198,7 @@ namespace Text_Adventure
                 if((command.Length >= 4) & (command.Substring(0, 4) == "drop"))
                 {
                     Drop(command);
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
@@ -200,6 +206,7 @@ namespace Text_Adventure
                 if((command.Length >= 6) & (command.ToLower().Substring(0, 6) == "attack"))
                 {
                     Attack(command);
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
@@ -207,23 +214,28 @@ namespace Text_Adventure
                 if((command.Length >= 7) & (command.Substring(0, 7) == "look at"))
                 {
                     LookAt(command);
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
                 
                 //command: "talk to"
                 if((command.Length >= 7) & (command.Substring(0, 7) == "talk to"))
                 {
+                    Console.WriteLine("\n");
                     TalkTo(command);
+                    Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     return;
                 }
 
                 //No valid command
                 Console.WriteLine("\nI am pretty shure i did not do that. (invalid command).\n");
+                Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 return;
             }
             catch
             {
                 Console.WriteLine("\nI am pretty shure i did not do that (invalid command).\n");
+                Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 return;
             }
         }
@@ -267,7 +279,7 @@ namespace Text_Adventure
             }
 
             //Method: Events
-            public void Events()
+            public void Events(string command)
             {
                 if(turnCounter > 15)
                 {
@@ -284,6 +296,13 @@ namespace Text_Adventure
                 {
                     caseSolfed = true;
                 }
+
+                if((command == "move east") & (currentRoom.GetTitle().ToLower() == "floor") & (player.GetInventory().Exists(x => x.GetName().ToLower() == "key")))
+                {
+                    Door door = allRooms.Find(x => x.GetTitle().ToLower() == "floor").GetDoors().Find(y => y.GetdirectionName().ToLower().Equals("east"));
+                    door.SetLocked(false);
+                }
+
                 return;
             }
 
@@ -299,7 +318,7 @@ namespace Text_Adventure
                     return;
                 }
 
-                Events();
+                Events(currentCommand);
 
                 if(!gameOver)
                 {
@@ -359,7 +378,7 @@ namespace Text_Adventure
                             int attackValueNpc = 0;
                             Console.WriteLine("I attacked " + currentEnemy.GetName() + ".");
 
-                            if(attackValuePlayer != attackValueNpc)
+                            if(attackValuePlayer > attackValueNpc)
                             {
                                 currentEnemy.ReduceHealth();
                                 Console.WriteLine("That attack did hit!");
@@ -473,10 +492,9 @@ namespace Text_Adventure
                         Console.WriteLine("I asked " + currentNpc.GetName() + " about the case:\n" + currentNpc.GetAnswer());
                         if(currentNpc.GetName() == "Lady Battenberg")
                         {
-                            NpcGiveItem(currentNpc.GetInventory().Find(x => x.GetName() == "Key"), currentNpc);
-                            Door door = allRooms.Find(x => x.GetTitle() == "Floor").GetDoors().Find(y => y.GetdirectionName().Equals("east"));
-                            door.SetLocked(false);
+                            NpcGiveItem(currentNpc.GetInventory().Find(x => x.GetName().ToLower() == "key"), currentNpc);
                             Console.WriteLine("She gave me the key to the Office.");
+                            return;
                         }
                         return;
                     }
