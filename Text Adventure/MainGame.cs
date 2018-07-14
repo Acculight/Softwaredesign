@@ -144,10 +144,11 @@ namespace Text_Adventure
         {
             try
             {
-
+            
+            //command: "help"
             if((command == "help") || (command == "h"))
             {
-                Console.WriteLine("help(l), look(l), look at <Npc or Item>, inventory(i), take <Item>, drop <item>, talk to <Npc>, attack <Npc>, use <Item>, move <Direction>");
+                Console.WriteLine("help(h), look(l), inventory(i), move <direction>, take <item>, drop <item>, attack <npc>, look at <item/npc>, talk to <npc>");
                 return;
             }
 
