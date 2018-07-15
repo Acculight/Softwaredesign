@@ -26,8 +26,6 @@ namespace Text_Adventure
             allRooms = new List<Room>();
             allNpcs = new List<Npc>();
             turnCounter = 0;
-
-            //Initialize Player
             Player mainPlayer = new Player(100);
             player = mainPlayer;
 
@@ -41,9 +39,9 @@ namespace Text_Adventure
             //Entrance Hall
             Room r2 = new Room("Entrance Hall", "A large room, with several columns and a floor made out of marvel. Two police officers were gathering around a lifeless body.");
             Item dagger = new Item("dagger", "The dagger was completely made out of stone. Strange symbols were engraved in the blade. They looked familiar to me, althoug i was shure that i had never seen them bevore.", true);
-            Item body = new Item("dead body", "The dead Body of a young woman. She was stabbed in the chest with a fancy dagger, but it seems to have missed hear heart.", false);
-            Item bloodtraces = new Item("blood trace", "There were blood traces on the floor. As if the victim would have runned for her life and collapsed here. They seemed to leed to the eastern door.", false);
-            Item note = new Item("note", "On the note was written: 'Meet me in the library' It is signed with the letter 'C'.", true);
+            Item body = new Item("dead body", "The dead Body of a young woman. She got stabbed in the chest with a fancy dagger, but it seemed to had missed hear heart.", false);
+            Item bloodtraces = new Item("blood trace", "There were blood traces on the floor. As if the victim would have runned for her life and collapsed there. The trace seemed to leed to the eastern door.", false);
+            Item note = new Item("note", "In the victims pocket was a note. On the note was written: 'Meet me in the library' It was signed with the letter 'C'.", true);
             Npc butler = new Npc("Alfred Sharp", "Grey hair, a small mustache and a perfectly aligned suit dressed that man. He looked exactly like you would imagine a butler to look like.", true, "Well Mr. Grifford, despite this terrible happenings today, i have much work to do. Because of the absence of Lord Charlie Battenberg till tomorrow. And before you ask, i have been in the service Room this whole day, assisting Lady Battenberg. The only strange thing, exept the 'incident', is that my precious cleaning mop is missing since this morning.", 100, r2);
             Npc police = new Npc("The Police", "Two police officers guarded the crime scene.", false, "Well Mr. Grifford, you may start with your investigation. If you should find anything... conclusive, don't hesitade to tell us.", 100, r2);
             r2.AddItem(dagger);
@@ -53,25 +51,25 @@ namespace Text_Adventure
             r2.AddNpc(police);
             
             //Dining Hall
-            Room r3 = new Room("Dining Hall", "A long table filled the middle of the room. It was prepared for one person.");
+            Room r3 = new Room("Dining Hall", "A long dining table filled the middle of the room. It was prepared for one person.");
             Npc lady = new Npc("Lady Battenberg", "She was an elder lady. Light grey hair and a classical long dress finished her look.", false, "Oh, it is terrible! Poor Isabelle... She left this world too early. And what is my husband going to say when he returns... . I nearly forgott, this is the key to my husbands office. You might need it for your investigation.", 100, r3);
             Item key = new Item("key", "The Key to the office of Lord Battenberg", true);
             lady.AddItem(key);
 
             //Kitchen
-            Room r4 = new Room("Kitchen", "A white stained room, that looks like a kitchen that is used by experienced people.");
+            Room r4 = new Room("Kitchen", "A white stained room, that looked like a kitchen, that is used by experienced people.");
             Npc cook = new Npc("Agate Murror", "A well feeded woman, with short brown hair. She was wearing a typical white kitchen uniform and looked quite bussy", false, "I don't know what happened. I have been in the kitchen the whole day. I was looking for a thief. In the last days, food has been disappearing and i am going to find out why!", 100, r4);
 
             //Floor
             Room r5 = new Room("Floor", "A long floor with several doors.");
 
             //Library
-            Room r6 = new Room("Library", "Tall bookshelfes covered the walls. Cobwebs and dust were all obout the place. Execpt one shelf. It looked well used.");
+            Room r6 = new Room("Library", "Tall bookshelfes covered the walls. Cobwebs and dust were all over the place. Execpt one shelf. It looked well used.");
             Item floor = new Item("wet floor", "The floor seemed to be cleaned not long ago.", false);
-            Item book1 = new Item("book: Ancient south american mythology", "A book about the Atztecs and their mythology and rituals.", true);
+            Item book1 = new Item("book: Ancient south american mythology", "A book about the Atztecs and theyr mythology and rituals.", true);
             Item book2 = new Item("book: A quick guide to get rich", "A book that will help your family get rich in just three generations.", true);
             Item book3 = new Item("book: The Red Circle", "A documentation about the mediacal history of pox.", true);
-            Item book4 = new Item("book: Fantastical secret doors and where to find them", "A book about secret doors in old mansions and castles.", true);
+            Item book4 = new Item("book: Fantastical secret doors and how to find them", "A book about secret doors in old mansions and castles.", true);
             r6.AddItem(floor);
             r6.AddItem(book1);
             r6.AddItem(book2);
@@ -79,18 +77,18 @@ namespace Text_Adventure
             r6.AddItem(book4);
 
             //Office
-            Room r7 = new Room("Office", "A large desk with many paper work on it. Lord Battenberg seemed to be very interested in ancient history. Especially in the culture of the Atztecs and Mayas.");
+            Room r7 = new Room("Office", "A small room with a large desk in the middle. Many books lied on the table. Lord Battenberg seemed to be very interrested in ancient history. Especially in the culture of the Atztecs and Mayas.");
 
             //Secret Passage
             Room r8 = new Room("Secret passage", "A long tunnel, with torches. Strange, they were burning.");
             Item mop = new Item("cleaning mop", "A mop, that is mostly used to clean the ground. It was wet.", true);
-            Item food = new Item("food leftovers", "Someone or something didn't finish its last meal.", false);
+            Item food = new Item("food leftovers", "Someone or something hasn't finish its last meal.", false);
             r8.AddItem(mop);
             r8.AddItem(food);
 
             //Secret Chamber
             Room r9 = new Room("Secret chamber", "The chamber was filled with torch light. In the middle was a man, bowed over an altar of stone. It was edged in blood.");
-            Npc lord = new Npc("Lord Battenberg", "He was spilled with blood. His face was mad. He wispered strange words in a language i could not understand. And his mad eyes loocked at me.", true, "Oh, who are you? Mhh, actually it doesn't matter anyway. You will make a fine addition to my ritual!", 100, r9);
+            Npc lord = new Npc("Lord Battenberg", "He was spilled with blood. His face was mad. He wispered strange words in a language i could not understand. And his mad eyes starred at me.", true, "Oh, who are you? Mhh, actually it doesn't matter anyway. You will make a fine addition to my ritual!", 100, r9);
 
             //Add Doors
             r1.AddDoor(new Door(Door.Directions.North, r2, "north", false));
@@ -141,9 +139,9 @@ namespace Text_Adventure
 
             //Intro
             Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("It was one of those rainy days in London, when i, Ian Griffort, private Detective, got called to help by the local Police.");
-            Console.WriteLine("The house maiden had been found dead. Stabbed in the back with a dagger.");
-            Console.WriteLine("It took about an hour, then i arrived at Battenberg Manor.");
+            Console.WriteLine("It was one of those rainy days in London, when I, Ian Griffort, private Detective, got called to help by the local Police.");
+            Console.WriteLine("The house maiden had been found dead. Stabbed in the chest with a dagger.");
+            Console.WriteLine("It took about an hour, then I arrived at Battenberg Manor.");
             Console.WriteLine("The Police had already finished its investigation but it ended without a result.");
             Console.WriteLine("It was on me, to find out what happened there.");
             Console.WriteLine("\nI arrived at the ");
@@ -233,13 +231,13 @@ namespace Text_Adventure
                 }
 
                 //No valid command
-                Console.WriteLine("\nI am pretty shure i did not do that. (invalid command).\n");
+                Console.WriteLine("\nI am pretty shure I did not do that. (invalid command).\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 return;
             }
             catch
             {
-                Console.WriteLine("\nI am pretty shure i did not do that (invalid command).\n");
+                Console.WriteLine("\nI am pretty shure I did not do that (invalid command).\n");
                 Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 return;
             }
@@ -291,7 +289,7 @@ namespace Text_Adventure
 
                 if((currentEnemy.GetName() == "Lord Battenberg") & (currentEnemy.GetHealth() <= 0))
                 {
-                    Console.WriteLine("I killed the mad lord. The police took care of the paper work and the whole happening was found news for the press. But i still can't get loose of this case. His mad eyes, i still feel them looking at me.");
+                    Console.WriteLine("I killed the mad lord. The police took care of the paper work and the whole happening was found news for the press. But I still can't get loose of this case. His mad eyes, i still feel them starring at me.");
                     gameOver = true;
                     Update();
                 }
@@ -340,7 +338,7 @@ namespace Text_Adventure
             {
                 if (command == "drop")
                     {
-                        Console.WriteLine("\nName a specific item to drop.\n");
+                        Console.WriteLine("\nMhh, which item did I drop?\n");
                         return;
                     }
 
@@ -431,7 +429,7 @@ namespace Text_Adventure
                     }
                     else
                     {
-                        Console.WriteLine("And that is how i died. It is strange when you think about it.");
+                        Console.WriteLine("And that is how I died. It is strange when you think about it.");
                         Console.WriteLine("\n-The game ended-");
                         gameOver = true;
                         Update();
@@ -491,7 +489,7 @@ namespace Text_Adventure
                     }
                     if((command.ToLower() == "talk to the police") & (caseSolfed == true))
                     {
-                        Console.WriteLine("I told the police about the madness happening within the secret chamber. The police took care of him and the paper work. The whole happening was found news for the press. But i still can't get loose of this case. His mad eyes, i still fell them looking at me. ");
+                        Console.WriteLine("I told the police about the madness happening within the secret chamber. The police took care of the mad lord and the paper work. The whole happening was found news for the press. But I still can't get loose of this case. His mad eyes, I still fell them starring at me. ");
                         gameOver = true;
                         Update();
                         return;
@@ -556,7 +554,7 @@ namespace Text_Adventure
             {
                 if (command == "take")
                     {
-                        Console.WriteLine("\nName a specific item to take.\n");
+                        Console.WriteLine("\nMhh, which item did i take?.\n");
                         return;
                     }
 
@@ -573,12 +571,9 @@ namespace Text_Adventure
                         Console.WriteLine("\nI was unable to take the " + command.Substring(5) + ".\n");
                         return;
                     }
-                    
-                    else
-                    {
-                        Console.WriteLine("\nThere was no " + command.Substring(5) + " to take.\n");
-                        return;
-                    }
+        
+                    Console.WriteLine("\nThere was no " + command.Substring(5) + " to take.\n");
+                    return;
             }
 
             //Method: Npc give item
