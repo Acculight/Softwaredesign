@@ -486,7 +486,7 @@ namespace Text_Adventure
                     }
                     if((command.ToLower() == "talk to the police") & (caseSolfed == true))
                     {
-                        Console.WriteLine("I told the police about the madness happening within the secret chamber. The police took care of the mad lord and the paper work. The whole happening was found news for the press. But I still can't get loose of this case. His mad eyes, I still fell them starring at me. ");
+                        Console.WriteLine("I told the police about the madness happening within the secret chamber. The police took care of the mad lord and the paper work. The whole happening was found news for the press. But I still can't get loose of this case. His mad eyes, I still feel them starring at me. ");
                         gameOver = true;
                         Update();
                         return;
