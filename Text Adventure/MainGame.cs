@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Text_Adventure
 {
@@ -299,7 +296,7 @@ namespace Text_Adventure
                     caseSolfed = true;
                 }
 
-                if((command.ToLower() == "take book: ancient south american mythologie") & (currentRoom.GetDoors().Exists(x => x.GetdirectionName() != "north")) & (currentRoom.GetTitle() == "Library"))
+                if((command.ToLower() == "take book: ancient south american mythology") & (currentRoom.GetDoors().Exists(x => x.GetdirectionName() != "north")) & (currentRoom.GetTitle().ToLower() == "library"))
                 {
                     Console.WriteLine("\nThe moment i pulled the book out of the shelf, the wall began to move and opened a secret passage way.");
                     currentRoom.AddDoor(new Door(Door.Directions.North, secretPassage, "north", false));
@@ -560,8 +557,8 @@ namespace Text_Adventure
 
                     if ((currentRoom.GetInventory().Find(x => x.GetName().ToLower().Equals(command.ToLower().Substring(5))).GetUseable() == true)) 
                     {
-                        player.AddItem(currentRoom.GetInventory().Find(x => x.GetName() == command.Substring(5)));
-                        currentRoom.RemoveItem(currentRoom.GetInventory().Find(x => x.GetName() == command.Substring(5)));
+                        player.AddItem(currentRoom.GetInventory().Find(x => x.GetName().ToLower() == command.ToLower().Substring(5)));
+                        currentRoom.RemoveItem(currentRoom.GetInventory().Find(x => x.GetName().ToLower() == command.ToLower().Substring(5)));
                         Console.WriteLine("\nI picked up the " + command.Substring(5) + ".\n");
                         return;
                     }
@@ -571,9 +568,11 @@ namespace Text_Adventure
                         Console.WriteLine("\nI was unable to take the " + command.Substring(5) + ".\n");
                         return;
                     }
-        
-                    Console.WriteLine("\nThere was no " + command.Substring(5) + " to take.\n");
-                    return;
+                    else
+                    {
+                        Console.WriteLine("\nThere was no " + command.Substring(5) + " to take.\n");
+                        return;
+                    } 
             }
 
             //Method: Npc give item
