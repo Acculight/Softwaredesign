@@ -13,14 +13,14 @@ namespace Text_Adventure
         private Room currentRoom;
         private List<Item> inventory;
 
-        public Npc(string _name, string _description, bool _fightable, string _answer, int _health, Room _currenRoom)
+        public Npc(string _name, string _description, bool _fightable, string _answer, int _health, Room _currentRoom)
         {
             name = _name;
             fightable = _fightable;
             description = _description;
             answer = _answer;
             health = _health;
-            currentRoom = _currenRoom;
+            currentRoom = _currentRoom;
             inventory = new List<Item>();
         }
     
